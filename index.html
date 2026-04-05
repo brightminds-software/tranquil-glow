@@ -50,12 +50,13 @@
 <body>
   <!-- START BODY CONTENT -->
   
-  <!-- START NAVIGATION -->
+<!-- START NAVIGATION -->
 <nav class="navbar">
   <div class="logo">
-    <img src="images/logo.jpg" alt="Tranguil Glow Logo">
+    <img src="images/logo.jpg" alt="Tranquil Glow Logo">
     <p>Tranquil Glow</p>
   </div>
+
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="#products">Products</a></li>
@@ -64,19 +65,27 @@
     <li><a href="#faq">FAQs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="menu-toggle">
+
+  <button class="menu-toggle" aria-label="Open menu">
     <i class="fas fa-bars"></i>
-  </div>
+  </button>
 </nav>
 <!-- END NAVIGATION -->
 
 
 <!-- START HERO SECTION -->
-<section class="hero">
+<section id="hero" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <picture>
+      <source srcset="images/hero/hero-small.jpg" media="(max-width: 768px)">
+      <img src="images/hero/hero-full.png" alt="Model with naturally glowing skin">
+    </picture>
+    <div class="hero-overlay"></div>
+  </div>
+
   <div class="hero-content">
     <h1>Glow Naturally, Shine Elegantly</h1>
     <p>Affordable luxury skincare for radiant, glowing skin.</p>
-    <!-- Button scrolls to products section -->
     <a href="#products" class="btn-primary">Shop Now</a>
   </div>
 </section>
@@ -84,169 +93,588 @@
 
 
 <!-- ===========================
-     START PRODUCTS SECTION
+     PROFESSIONAL PRODUCTS PAGE (HTML ONLY)
+     Compatible with your current CSS classes and variables
      =========================== -->
-<section id="products" class="products">
-  <h2>Our Products</h2>
-  <div class="product-grid">
 
-    <!-- PRODUCT 1 -->
-    <div class="product-card">
-  <img src="images/image1.jpg" alt="Glow Tone Face Cream">
-  <h3>Glow Tone Face Cream</h3>
-  <p class="price">500 Ksh</p>
-  <div class="product-actions">
-    <a href="https://wa.me/32467859094?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Glow%20Tone%20Face%20Cream%20(500%20Ksh).%20Is%20it%20available?" class="btn-buy">Buy</a>
-    <button class="btn-details"
-      data-product="Glow Tone Face Cream"
-      data-price="500 Ksh"
-      data-description="
-      <h4>Overview</h4>
-      <p>A hydrating daily cream designed to smooth, even, and refresh your skin. Glow Tone Face Cream locks in moisture while supporting a radiant, balanced complexion. Its lightweight texture makes it ideal for morning use, leaving your skin soft and luminous throughout the day.</p>
-      
-      <h4>How to Use</h4>
-      <ul>
-        <li>Apply a small amount to cleansed face and neck in the morning.</li>
-        <li>Massage gently in upward circular motions until fully absorbed.</li>
-        <li>For best results, pair with sunscreen during the day.</li>
-      </ul>
-      
-      <h4>Important</h4>
-      <ul>
-        <li>For external use only.</li>
-      </ul>"
-      data-image="images/image1.jpg">View Details</button>
-  </div>
-</div>
+<nav id="product-nav" class="product-nav" aria-label="Product categories">
+  <ul>
+    <li><a href="#overview-section">Featured</a></li>
+    <li><a href="#face-section">Face Glow Creams</a></li>
+    <li><a href="#lotions-section">Body Glow Lotions</a></li>
+    <li><a href="#target-section">Target Area Creams</a></li>
+    <li><a href="#oils-section">Body Glow Oils</a></li>
+    <li><a href="#scrubs-section">Scrubs</a></li>
+  </ul>
+</nav>
 
-    <!-- PRODUCT 2 -->
-    <div class="product-card">
-  <img src="images/image1.jpg" alt="Radiance Brightening Face Cream">
-  <h3>Radiance Brightening Face Cream</h3>
-  <p class="price">500 Ksh</p>
-  <div class="product-actions">
-    <a href="https://wa.me/32467859094?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiance%20Brightening%20Face%20Cream%20(500%20Ksh).%20Is%20it%20available?" class="btn-buy">Buy</a>
-    <button class="btn-details"
-      data-product="Radiance Brightening Face Cream"
-      data-price="500 Ksh"
-      data-description="
-      <h4>Overview</h4>
-      <p>Formulated to brighten and even out skin tone, this cream helps restore a natural glow. Its nourishing blend reduces dullness and enhances clarity, leaving your skin refreshed and radiant.</p>
-      
-      <h4>How to Use</h4>
-      <ul>
-        <li>Apply evenly to cleansed face and neck, morning or evening.</li>
-        <li>Massage gently until absorbed.</li>
-        <li>Always follow with sunscreen during the day.</li>
-      </ul>
-      
-      <h4>Important</h4>
-      <ul>
-        <li>For external use only.</li>
-      </ul>"
-      data-image="images/image1.jpg">View Details</button>
-  </div>
-</div>
+<section id="overview-section" class="section section--overview" aria-labelledby="overview-title">
+  <h2 id="overview-title">Featured Products</h2>
+  <p class="intro">
+    Explore our bestselling glow products, carefully selected for hydration, brightening, and daily skin support.
+  </p>
 
-    <!-- PRODUCT 3 -->
-    <div class="product-card">
-  <img src="images/image1.jpg" alt="Luminous Glow Light Face Cream">
-  <h3>Luminous Glow Light Face Cream</h3>
-  <p class="price">800 Ksh</p>
-  <div class="product-actions">
-    <a href="https://wa.me/32467859094?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Luminous%20Glow%20Light%20Face%20Cream%20(800%20Ksh).%20Is%20it%20available?" class="btn-buy">Buy</a>
-    <button class="btn-details"
-      data-product="Luminous Glow Light Face Cream"
-      data-price="800 Ksh"
-      data-description="
-      <h4>Overview</h4>
-      <p>A specialized night cream that illuminates and evens skin tone while you rest. Best used as part of your nighttime routine, complementing Glow Tone or Hydra Glow Boost creams.</p>
-      
-      <h4>How to Use</h4>
-      <ul>
-        <li>Apply a thin layer to cleansed face and neck at night only.</li>
-        <li>Massage gently until absorbed.</li>
-        <li>Do not use during the day.</li>
-        <li>Pair with sunscreen during the day for best results.</li>
-      </ul>
-      
-      <h4>Important</h4>
-      <ul>
-        <li>For external use only.</li>
-        <li>Not advisable for pregnant or breastfeeding women.</li>
-      </ul>"
-      data-image="images/image1.jpg">View Details</button>
-  </div>
-</div>
+  <div class="product-grid overview-grid" role="list">
+    <article class="product-card" role="listitem" id="product-glow-tone" data-category="face">
+      <div class="image-wrap">
+        <img src="images/glow-face-cream/image1.jpg" alt="Glow Tone Face Cream" loading="lazy">
+      </div>
+      <h3>Glow Tone Face Cream</h3>
+      <p class="price">500 Ksh</p>
+      <p class="summary">A lightweight daily cream that helps even tone and keep skin moisturized.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Glow%20Tone%20Face%20Cream%20(500%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-glow-tone">View more</button>
+      </div>
+      <div id="desc-glow-tone" class="product-full-description" hidden>
+        <h4>Overview</h4>
+        <p>
+          A hydrating daily cream designed to smooth, refresh, and support a radiant complexion.
+        </p>
+        <h4>How to Use</h4>
+        <ul>
+          <li>Apply to cleansed face and neck in the morning.</li>
+          <li>Massage gently until fully absorbed.</li>
+        </ul>
+      </div>
+    </article>
 
-    <!-- PRODUCT 4 -->
-    <div class="product-card">
-  <img src="images/image4.jpg" alt="Hydra Glow Boost Face Cream">
-  <h3>Hydra Glow Boost Face Cream</h3>
-  <p class="price">700 Ksh</p>
-  <div class="product-actions">
-    <a href="https://wa.me/32467859094?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Hydra%20Glow%20Boost%20Face%20Cream%20(700%20Ksh).%20Is%20it%20available?" class="btn-buy">Buy</a>
-    <button class="btn-details"
-      data-product="Hydra Glow Boost Face Cream"
-      data-price="700 Ksh"
-      data-description="
-      <h4>Overview</h4>
-      <p>An intensive moisture‑boosting cream that quenches dehydrated skin and restores a healthy glow. Hydra Glow Boost delivers deep hydration, plumps the skin, and enhances elasticity for a supple, radiant complexion.</p>
-      
-      <h4>How to Use</h4>
-      <ul>
-        <li>Apply generously to clean skin after cleansing.</li>
-        <li>Massage gently into the face and neck until absorbed.</li>
-        <li>Use morning and evening, or whenever extra hydration is needed.</li>
-      </ul>
-      
-      <h4>Important</h4>
-      <ul>
-        <li>For external use only.</li>
-      </ul>"
-      data-image="images/image4.jpg">View Details</button>
-  </div>
-</div>
+    <article class="product-card" role="listitem" id="product-radiance" data-category="face">
+      <div class="image-wrap">
+        <img src="images/image2.jpg" alt="Radiance Brightening Face Cream" loading="lazy">
+      </div>
+      <h3>Radiance Brightening Face Cream</h3>
+      <p class="price">500 Ksh</p>
+      <p class="summary">A brightening formula made to reduce dullness and restore a healthy-looking glow.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiance%20Brightening%20Face%20Cream%20(500%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-radiance">View more</button>
+      </div>
+      <div id="desc-radiance" class="product-full-description" hidden>
+        <h4>Overview</h4>
+        <p>
+          Helps brighten and even out skin tone while supporting a fresh, luminous finish.
+        </p>
+        <h4>How to Use</h4>
+        <ul>
+          <li>Apply evenly to cleansed face and neck, morning or evening.</li>
+        </ul>
+      </div>
+    </article>
 
-    <!-- PRODUCT 5 -->
-    <div class="product-card">
-      <img src="images/image5.jpg" alt="Premium Glow Serum">
+    <article class="product-card" role="listitem" id="product-luminous" data-category="face">
+      <div class="image-wrap">
+        <img src="images/image3.jpg" alt="Luminous Glow Light Face Cream" loading="lazy">
+      </div>
+      <h3>Luminous Glow Light Face Cream</h3>
+      <p class="price">800 Ksh</p>
+      <p class="summary">A nighttime cream that supports a brighter and more even-looking complexion.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Luminous%20Glow%20Light%20Face%20Cream%20(800%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-luminous">View more</button>
+      </div>
+      <div id="desc-luminous" class="product-full-description" hidden>
+        <h4>Overview</h4>
+        <p>
+          A specialized night cream made to support skin glow while you rest.
+        </p>
+        <h4>Important</h4>
+        <ul>
+          <li>Not advisable for pregnant or breastfeeding women.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="product-card" role="listitem" id="product-hydra" data-category="face">
+      <div class="image-wrap">
+        <img src="images/image4.jpg" alt="Hydra Glow Boost Face Cream" loading="lazy">
+      </div>
+      <h3>Hydra Glow Boost Face Cream</h3>
+      <p class="price">700 Ksh</p>
+      <p class="summary">An intensive moisture-boosting cream that helps restore softness and elasticity.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Hydra%20Glow%20Boost%20Face%20Cream%20(700%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-hydra">View more</button>
+      </div>
+      <div id="desc-hydra" class="product-full-description" hidden>
+        <h4>Overview</h4>
+        <p>
+          Deeply hydrating and ideal for skin that needs extra moisture and comfort.
+        </p>
+      </div>
+    </article>
+
+    <article class="product-card" role="listitem" id="product-serum" data-category="face">
+      <div class="image-wrap">
+        <img src="images/image5.jpg" alt="Premium Glow Serum" loading="lazy">
+      </div>
       <h3>Premium Glow Serum</h3>
       <p class="price">Kes 2,000</p>
-      <div class="product-actions">
-        <a href="https://wa.me/32467859094?text=Hello%20Tranguil,%20I%20would%20like%20to%20buy%20Premium%20Glow%20Serum%20(Kes%202000).%20Is%20it%20available?" class="btn-buy">Buy</a>
-        <button class="btn-details"
-          data-product="Premium Glow Serum"
-          data-price="Kes 2,000"
-          data-description="
-          <h4>Overview</h4>
-          <p>Advanced serum that reduces fatigue signs and supports youthful, radiant skin. Perfect with Glow Tone or Radiance creams.</p>"
-          data-image="images/image5.jpg">View Details</button>
+      <p class="summary">A concentrated serum designed to support radiance and reduce tired-looking skin.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Premium%20Glow%20Serum%20(Kes%202000).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-serum">View more</button>
+      </div>
+      <div id="desc-serum" class="product-full-description" hidden>
+        <h4>Overview</h4>
+        <p>
+          A premium serum that helps refresh dull skin and enhance a healthy-looking glow.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="face-section" class="category-section bg-face" aria-labelledby="face-title">
+  <h2 id="face-title">Face Glow Creams</h2>
+  <p class="section-intro">A complete face collection for hydration, glow, and daily skin support.</p>
+
+  <div class="product-grid">
+    <article class="product-card" id="face-glow-tone">
+      <div class="image-wrap">
+        <img src="images/glow-face-cream/image1.jpg" alt="Glow Tone Face Cream" loading="lazy">
+      </div>
+      <h3>Glow Tone Face Cream</h3>
+      <p class="price">500 Ksh</p>
+      <p class="summary">A lightweight cream for smooth, fresh, and moisturized-looking skin.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Glow%20Tone%20Face%20Cream%20(500%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-glow-tone">View more</button>
+      </div>
+      <div id="desc-face-glow-tone" class="product-full-description" hidden>
+        <p>Full description available in the featured section above.</p>
+      </div>
+    </article>
+
+    <article class="product-card" id="face-radiance">
+      <div class="image-wrap">
+        <img src="images/image2.jpg" alt="Radiance Brightening Face Cream" loading="lazy">
+      </div>
+      <h3>Radiance Brightening Face Cream</h3>
+      <p class="price">500 Ksh</p>
+      <p class="summary">Brightens dull skin and helps maintain a clean, balanced look.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiance%20Brightening%20Face%20Cream%20(500%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-radiance">View more</button>
+      </div>
+      <div id="desc-face-radiance" class="product-full-description" hidden>
+        <p>Full description available in the featured section above.</p>
+      </div>
+    </article>
+
+    <article class="product-card" id="face-luminous">
+      <div class="image-wrap">
+        <img src="images/image3.jpg" alt="Luminous Glow Light Face Cream" loading="lazy">
+      </div>
+      <h3>Luminous Glow Light Face Cream</h3>
+      <p class="price">800 Ksh</p>
+      <p class="summary">Night cream designed to support a brighter, smoother appearance.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Luminous%20Glow%20Light%20Face%20Cream%20(800%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-luminous">View more</button>
+      </div>
+      <div id="desc-face-luminous" class="product-full-description" hidden>
+        <p>Full description available in the featured section above.</p>
+      </div>
+    </article>
+
+    <article class="product-card" id="face-hydra">
+      <div class="image-wrap">
+        <img src="images/image4.jpg" alt="Hydra Glow Boost Face Cream" loading="lazy">
+      </div>
+      <h3>Hydra Glow Boost Face Cream</h3>
+      <p class="price">700 Ksh</p>
+      <p class="summary">Supports deep hydration and a soft, refreshed feel.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Hydra%20Glow%20Boost%20Face%20Cream%20(700%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-hydra">View more</button>
+      </div>
+      <div id="desc-face-hydra" class="product-full-description" hidden>
+        <p>Full description available in the featured section above.</p>
+      </div>
+    </article>
+
+    <article class="product-card" id="face-serum">
+      <div class="image-wrap">
+        <img src="images/image5.jpg" alt="Premium Glow Serum" loading="lazy">
+      </div>
+      <h3>Premium Glow Serum</h3>
+      <p class="price">Kes 2,000</p>
+      <p class="summary">A concentrated serum that helps improve the appearance of tired skin.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Premium%20Glow%20Serum%20(Kes%202000).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-serum">View more</button>
+      </div>
+      <div id="desc-face-serum" class="product-full-description" hidden>
+        <p>Full description available in the featured section above.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="lotions-section" class="category-section bg-lotions" aria-labelledby="lotions-title">
+  <h2 id="lotions-title">Body Glow Lotions</h2>
+  <p class="section-intro">Lightweight body lotions that hydrate, soften, and leave a smooth finish.</p>
+
+  <div class="product-grid">
+      
+    <article class="product-card" id="lotion-glow-tone">
+  <div class="image-wrap">
+    <img src="images/glow-body-lotion/image 1.jpg" alt="Glow Tone Body Lotion" loading="lazy">
+  </div>
+
+  <h3>Glow Tone Body Lotion</h3>
+
+  <p class="price">KSh 700</p>
+
+  <p class="summary">
+    Reveal your skin’s natural radiance with our Glow Tone Body Lotion. It deeply hydrates while helping to even out skin tone. The lightweight texture absorbs quickly, leaving your skin soft, supple, and glowing all day.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Glow%20Tone%20Body%20Lotion%20(KSh%20700)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-glow-tone">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-lotion-glow-tone" class="product-full-description" hidden>
+    <p>
+      Perfect for daily use, this lotion restores moisture balance and enhances your skin’s natural luminosity without heaviness.
+    </p>
+
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Deep hydration for smooth, healthy skin</li>
+      <li>Helps even out skin tone naturally</li>
+      <li>Lightweight, non-greasy formula – suitable for all skin types</li>
+      <li>Ideal for everyday use</li>
+    </ul>
+  </div>
+</article>  
+    
+
+    <article class="product-card" id="lotion-radiant-tone">
+  <div class="image-wrap">
+    <img src="images/glow-body-lotion/image2.jpg" alt="Radiant Tone Brightening Lotion" loading="lazy">
+  </div>
+
+  <h3>Radiant Tone Brightening Lotion</h3>
+
+  <p class="price">KSh 1,000</p>
+
+  <p class="summary">
+    Experience a renewed glow with Radiant Tone Brightening Lotion. This advanced formula combines gentle brightening extracts with antioxidants to visibly enhance clarity and radiance. It helps reduce dullness and uneven pigmentation, promoting a more balanced, luminous complexion.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiant%20Tone%20Brightening%20Lotion%20(KSh%201000)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-radiant-tone">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-lotion-radiant-tone" class="product-full-description" hidden>
+    <p>
+      With consistent use, your skin feels refreshed, silky, and beautifully radiant.
+    </p>
+
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Brightens and revitalizes dull skin</li>
+      <li>Promotes an even, radiant complexion</li>
+      <li>Infused with antioxidants for skin protection</li>
+      <li>Smooth, fast-absorbing texture</li>
+    </ul>
+  </div>
+</article>
+
+
+<article class="product-card" id="lotion-luminous-glow">
+  <div class="image-wrap">
+    <img src="images/glow-body-lotion/image3.jpg" alt="Luminous Glow Light Lotion" loading="lazy">
+  </div>
+
+  <h3>Luminous Glow Light Lotion</h3>
+
+  <p class="price">KSh 1,500</p>
+
+  <p class="summary">
+    Illuminate your skin with Luminous Glow Light Lotion, crafted to deliver a soft, natural glow. Its feather-light formula smooths and evens skin tone. It nourishes without heaviness, making it perfect for warm climates or daytime wear. Your skin feels refreshed, luminous, and effortlessly radiant. 2-3 shades brighter.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Luminous%20Glow%20Light%20Lotion%20(KSh%201500)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-luminous-glow">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-lotion-luminous-glow" class="product-full-description" hidden>
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Evens skin tone and enhances natural glow</li>
+      <li>Lightweight and breathable for daily comfort</li>
+      <li>Adds a soft, illuminated finish</li>
+      <li>Suitable for all skin tones and types</li>
+    </ul>
+  </div>
+</article>
+
+
+
+
+  </div>
+</section>
+
+<section id="target-section" class="category-section bg-target" aria-labelledby="target-title">
+  <h2 id="target-title">Target Area Creams</h2>
+  <p class="section-intro">Specialized creams for knees, elbows, underarms, and other small areas.</p>
+
+  <div class="product-grid">
+      
+    <article class="product-card" id="target-even-tone">
+  <div class="image-wrap">
+    <img src="images/targeted-area/image 1.jpg" alt="Tone Harmony Cream for hands, elbows, knees and legs" loading="lazy">
+  </div>
+
+  <h3>Tone Harmony Cream – Hands, Elbows, Knees & Legs</h3>
+
+  <p class="price">KSh 1,500</p>
+
+  <p class="summary">
+    A concentrated formula designed to improve the appearance of uneven tone in smaller, targeted areas.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Tone%20Harmony%20Cream%20(KSh%201,500)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-even-tone">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-target-even-tone" class="product-full-description" hidden>
+    <p>
+      Designed for areas that need extra care—hands, elbows, knees, and legs—this 4-in-1 cream helps restore smoothness and improve overall skin tone.
+    </p>
+
+    <p>
+      Its rich yet fast-absorbing formula deeply nourishes dry, rough skin while reducing the appearance of discoloration. Infused with botanical extracts and essential vitamins, it leaves your skin soft, supple, and evenly balanced.
+    </p>
+
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Improves the appearance of uneven tone in targeted areas</li>
+      <li>Deeply moisturizes and softens rough skin</li>
+      <li>Promotes a smoother and more even finish with regular use</li>
+      <li>Ideal for daily application on problem areas (up to 3 times a day)</li>
+    </ul>
+  </div>
+</article>
+
+    <article class="product-card" id="target-smooth">
+  <div class="image-wrap">
+    <img src="images/targeted-area/image2.jpg" alt="Intima Glow Brightener for inner thighs, underarms, bikini line, and booty" loading="lazy">
+  </div>
+
+  <h3>Intima Glow Brightener – Inner Thighs, Underarms, Bikini Line & Booty</h3>
+
+  <p class="price">KSh 1,500</p>
+
+  <p class="summary">
+    Gentle yet effective, this 4-in-1 brightening cream is formulated for delicate areas to refine texture, reduce dullness, and enhance natural clarity without irritation.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Intima%20Glow%20Brightener%20(KSh%201,500)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-smooth">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-target-smooth" class="product-full-description" hidden>
+    <p>
+      Formulated for delicate areas such as the inner thighs, underarms, bikini line, and booty, this cream helps refine texture, reduce dullness, and enhance natural clarity without causing irritation.
+    </p>
+
+    <p>
+      The lightweight formula absorbs quickly, leaving skin feeling fresh, silky, and beautifully illuminated.
+    </p>
+
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Brightens and refines intimate areas safely</li>
+      <li>Smooths uneven texture and tone</li>
+      <li>Lightweight, non-sticky, and soothing</li>
+    </ul>
+  </div>
+</article>
+    
+
+<article class="product-card" id="target-stretch-scar">
+  <div class="image-wrap">
+    <img src="images/targeted-area/image3.jpg" alt="Stretch Mark and Scar Enhance Cream" loading="lazy">
+  </div>
+
+  <h3>Stretch Mark & Scar Enhance Cream</h3>
+
+  <p class="price">KSh 1,500</p>
+
+  <p class="summary">
+    This restorative cream supports skin renewal and elasticity, helping to minimize the appearance of stretch marks and scars.
+  </p>
+
+  <div class="actions">
+    <a 
+      class="btn-buy" 
+      href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Stretch%20Mark%20%26%20Scar%20Enhance%20Cream%20(KSh%201,500)."
+      target="_blank"
+      rel="noopener"
+    >
+      Buy
+    </a>
+
+    <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-stretch-scar">
+      View more
+    </button>
+  </div>
+
+  <div id="desc-target-stretch-scar" class="product-full-description" hidden>
+    <p>
+      Enriched with natural oils and botanical extracts, this cream deeply hydrates and nourishes, promoting smoother, more resilient skin. With consistent use, it helps restore confidence and radiance to your skin’s texture.
+    </p>
+
+    <h4>Key Benefits:</h4>
+    <ul>
+      <li>Helps fade stretch marks and scars over time</li>
+      <li>Suitable for all skin types</li>
+    </ul>
+  </div>
+</article>    
+    
+    
+    
+  </div>
+</section>
+
+<section id="oils-section" class="category-section bg-oils" aria-labelledby="oils-title">
+  <h2 id="oils-title">Body Glow Oils</h2>
+  <p class="section-intro">Light oils that help seal in moisture and leave skin looking radiant.</p>
+
+  <div class="product-grid">
+    <article class="product-card" id="oil-radiant">
+      <div class="image-wrap">
+        <img src="images/oil-1.jpg" alt="Radiant Body Oil" loading="lazy">
+      </div>
+      <h3>Radiant Body Oil</h3>
+      <p class="price">900 Ksh</p>
+      <p class="summary">A botanical oil blend that nourishes skin and adds a luminous finish.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiant%20Body%20Oil%20(900%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-oil-radiant">View more</button>
+      </div>
+      <div id="desc-oil-radiant" class="product-full-description" hidden></div>
+    </article>
+
+    <article class="product-card" id="oil-nourish">
+      <div class="image-wrap">
+        <img src="images/oil-2.jpg" alt="Nourish and Glow Oil" loading="lazy">
+      </div>
+      <h3>Nourish &amp; Glow Oil</h3>
+      <p class="price">1,100 Ksh</p>
+      <p class="summary">A fast-absorbing oil with antioxidants to support healthy-looking skin.</p>
+      <div class="actions">
+        <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Nourish%20%26%20Glow%20Oil%20(1100%20Ksh).">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-oil-nourish">View more</button>
+      </div>
+      <div id="desc-oil-nourish" class="product-full-description" hidden></div>
+    </article>
+  </div>
+</section>
+
+<section id="scrubs-section" class="category-section bg-scrubs" aria-labelledby="scrubs-title">
+  <h2 id="scrubs-title">Scrubs</h2>
+  <p class="section-intro">Gentle scrubs are coming soon. We are preparing fresh exfoliating formulas for launch.</p>
+
+  <div class="product-grid">
+    <article class="product-card" data-category="scrubs" id="scrubs-placeholder">
+      <div class="image-wrap">
+        <img src="images/scrub/image1.png" alt="Scrubs Coming Soon" loading="lazy">
+      </div>
+      <h3>Scrubs</h3>
+      <p class="price">Coming Soon</p>
+      <p class="summary">We are finalizing gentle scrub formulas. Check back soon for updates.</p>
+      <div class="actions">
+        <a class="btn-buy" aria-disabled="true">Buy</a>
+        <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-scrubs">View more</button>
+      </div>
+      <div id="desc-scrubs" class="product-full-description" hidden>
+        <p>Scrub collection will be available soon.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div id="productModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-panel" role="document">
+    <button class="modal-close" aria-label="Close modal" data-close>&times;</button>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice" class="price"></p>
+        <div id="modalDescription"></div>
+        <a id="modalBuy" class="btn-buy" href="#" target="_blank" rel="noopener">Buy</a>
       </div>
     </div>
-
-  </div>
-  
-  
-  
-  
-  <!-- ===========================
-     PRODUCT MODAL
-     =========================== -->
-<div id="productModal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <img id="modalImage" src="" alt="">
-    <h3 id="modalTitle"></h3>
-    <p id="modalPrice"></p>
-    <div id="modalDescription"></div>
   </div>
 </div>
-</section>
-<!-- ===========================
-     END PRODUCTS SECTION
-     =========================== -->
 
+<!-- ===========================
+     ENDS PROFESSIONAL PRODUCTS PAGE (HTML ONLY)
+     Compatible with your current CSS classes and variables
+     =========================== -->
 
 
 <!-- ===========================
@@ -416,7 +844,7 @@
       <a href="mailto:contact@tranquilglowbeauty.com" class="contact-btn">
         <i class="fas fa-envelope"></i> Email Us
       </a>
-      <a href="https://wa.me/32467859094" target="_blank" class="contact-btn whatsapp">
+      <a href="https://wa.me/254795284897" target="_blank" class="contact-btn whatsapp">
         <i class="fab fa-whatsapp"></i> WhatsApp Us
       </a>
     </div>
