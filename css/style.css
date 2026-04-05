@@ -934,7 +934,7 @@ html {
 
 .btn-buy,
 .btn-view-more,
-.btn-details {
+.btn-details, .feature-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -965,7 +965,7 @@ html {
 }
 
 .btn-view-more,
-.btn-details {
+.btn-details, .feature-btn {
   background: rgba(255, 255, 255, 0.92);
   color: var(--color-primary);
   border-color: rgba(15, 23, 42, 0.1);
@@ -974,7 +974,7 @@ html {
 .btn-view-more:hover,
 .btn-details:hover,
 .btn-view-more:focus-visible,
-.btn-details:focus-visible {
+.btn-details:focus-visible, .feature-btn {
   background: #fff;
   transform: translateY(-2px);
   outline: none;
