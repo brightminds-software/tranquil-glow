@@ -70,9 +70,46 @@
   <button class="menu-toggle" aria-label="Open menu">
     <i class="fas fa-bars"></i>
   </button>
+  <button class="cart-toggle" id="cartToggle" aria-label="Open cart" aria-expanded="false" type="button">
+    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
 </nav>
 <!-- END NAVIGATION -->
 
+
+
+<!-- START CART DRAWER -->
+<div id="cartDrawer" class="cart-drawer" aria-hidden="true" data-whatsapp-number="254795284897">
+  <div class="cart-drawer__overlay" data-cart-close></div>
+  <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer__header">
+      <h2 id="cartTitle">Your Cart</h2>
+      <button type="button" class="cart-close" data-cart-close aria-label="Close cart">&times;</button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <div id="cartItems" class="cart-items"></div>
+      <p id="cartEmpty" class="cart-empty">Your cart is empty.</p>
+    </div>
+
+    <div class="cart-drawer__footer">
+      <div class="cart-summary">
+        <span>Total</span>
+        <strong id="cartTotal">KSh 0</strong>
+      </div>
+
+      <a id="cartCheckout" class="btn-buy cart-checkout" href="#" target="_blank" rel="noopener">
+        Checkout via WhatsApp
+      </a>
+
+      <button type="button" id="cartClear" class="btn-view-more cart-clear">
+        Clear Cart
+      </button>
+    </div>
+  </aside>
+</div>
+<!-- END CART DRAWER -->
 
 <!-- START HERO SECTION -->
 <section id="hero" class="hero">
@@ -225,6 +262,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-glow-tone">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-face-glow-tone" class="product-full-description" hidden>
@@ -272,6 +310,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-radiance-brightening">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-face-radiance-brightening" class="product-full-description" hidden>
@@ -317,6 +356,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-luminous-glow-light">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-face-luminous-glow-light" class="product-full-description" hidden>
@@ -367,6 +407,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-face-hydra-glow-boost">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-face-hydra-glow-boost" class="product-full-description" hidden>
@@ -418,6 +459,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-glow-tone">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-lotion-glow-tone" class="product-full-description" hidden>
@@ -462,6 +504,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-radiant-tone">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-lotion-radiant-tone" class="product-full-description" hidden>
@@ -506,6 +549,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-lotion-luminous-glow">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-lotion-luminous-glow" class="product-full-description" hidden>
@@ -557,6 +601,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-even-tone">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-target-even-tone" class="product-full-description" hidden>
@@ -604,6 +649,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-smooth">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-target-smooth" class="product-full-description" hidden>
@@ -651,6 +697,7 @@
     <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-target-stretch-scar">
       View more
     </button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
   </div>
 
   <div id="desc-target-stretch-scar" class="product-full-description" hidden>
@@ -686,6 +733,7 @@
       <div class="actions">
         <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Radiant%20Body%20Oil%20(900%20Ksh).">Buy</a>
         <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-oil-radiant">View more</button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
       </div>
       <div id="desc-oil-radiant" class="product-full-description" hidden></div>
     </article>
@@ -700,6 +748,7 @@
       <div class="actions">
         <a class="btn-buy" href="https://wa.me/254795284897?text=Hello%20Tranquil,%20I%20would%20like%20to%20buy%20Nourish%20%26%20Glow%20Oil%20(1100%20Ksh).">Buy</a>
         <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-oil-nourish">View more</button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
       </div>
       <div id="desc-oil-nourish" class="product-full-description" hidden></div>
     </article>
@@ -721,6 +770,7 @@
       <div class="actions">
         <a class="btn-buy" aria-disabled="true">Buy</a>
         <button class="btn-view-more" type="button" aria-expanded="false" aria-controls="desc-scrubs">View more</button>
+    <button class="btn-add-to-cart" type="button">Add to Cart</button>
       </div>
       <div id="desc-scrubs" class="product-full-description" hidden>
         <p>Scrub collection will be available soon.</p>
@@ -751,112 +801,134 @@
      =========================== -->
 
 
+
 <!-- ===========================
      START OFFERS SECTION
      =========================== -->
 <section id="offers" class="offers">
   <h2>Online Special Offers</h2>
+
   <div class="offer-grid">
 
-  <!-- OFFER 1 -->
-<div class="offer-card">
-  <h3>Targeted Area Products</h3>
-  <p class="price">1500 Ksh <br>1 Free Pen Perfumes</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Targeted%20Area%20Products%20-%201500%20Ksh%20+%20Free%20Pen%20Perfumes">
-      Buy
-    </a>        
-  </div>
-</div>
+    <!-- OFFER 1 -->
+    <div class="offer-card" data-name="Targeted Area Products" data-price="1500">
+      <h3>Targeted Area Products</h3>
+      <p class="price">1500 Ksh <br>1 Free Pen Perfumes</p>
 
-<!-- OFFER 2 -->
-<div class="offer-card">
-  <h3>Glow Tone Combo</h3>
-  <p class="price">1500 Ksh <br>1 Free Pen Perfumes</p>
-  <p class="details">Glow Tone Face (550) + Body Lotion (950)</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Glow%20Tone%20Combo%20-%201500%20Ksh%20(Glow%20Tone%20Face%20550%20+%20Body%20Lotion%20950)%20+%20Free%20Pen%20Perfumes">
-      Buy
-    </a>        
-  </div>
-</div>
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Targeted%20Area%20Products%20-%201500%20Ksh%20+%20Free%20Pen%20Perfumes"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
 
-<!-- OFFER 3 -->
-<div class="offer-card">
-  <h3>Brightening Combo</h3>
-  <p class="price">2000 Ksh <br> Brightening Face (700) + Lotion (1300) + 1 Free Pen Perfume</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Brightening%20Combo%20-%202000%20Ksh%20(Brightening%20Face%20700%20+%20Lotion%201300)%20+%20Free%20Pen%20Perfume">
-      Buy
-    </a>        
-  </div>
-</div>
+    <!-- OFFER 2 -->
+    <div class="offer-card" data-name="Glow Tone Combo" data-price="1500">
+      <h3>Glow Tone Combo</h3>
+      <p class="price">1500 Ksh <br>1 Free Pen Perfumes</p>
+      <p class="details">Glow Tone Face (550) + Body Lotion (950)</p>
 
-<!-- OFFER 4 -->
-<div class="offer-card">
-  <h3>Lightening Combo</h3>
-  <p class="price">3500 Ksh <br> Face (1000) Lotion (2500) + 2 Free Pen Perfumes</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Lightening%20Combo%20-%203500%20Ksh%20(Face%201000%20Lotion%202500)%20+%202%20Free%20Pen%20Perfumes">
-      Buy
-    </a>        
-  </div>
-</div>
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Glow%20Tone%20Combo%20-%201500%20Ksh%20(Glow%20Tone%20Face%20550%20+%20Body%20Lotion%20950)%20+%20Free%20Pen%20Perfumes"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
 
-<!-- OFFER 5 -->
-<div class="offer-card">
-  <h3>Exfoliating Glow Scrub</h3>
-  <p class="price">600 Ksh</p>
-  <p class="details">250ml Lactic Acid + Gloves</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Exfoliating%20Glow%20Scrub%20-%20600%20Ksh%20(250ml%20Lactic%20Acid%20+%20Gloves)">
-      Buy
-    </a>        
-  </div>
-</div>
+    <!-- OFFER 3 -->
+    <div class="offer-card" data-name="Brightening Combo" data-price="2000">
+      <h3>Brightening Combo</h3>
+      <p class="price">2000 Ksh <br>Brightening Face (700) + Lotion (1300) + 1 Free Pen Perfume</p>
 
-<!-- OFFER 6 -->
-<div class="offer-card">
-  <h3>Glow Body Oil</h3>
-  <p class="price">700 Ksh <br> Any glow body oil + Any face cream + 1 Free Perfume Pen</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Glow%20Body%20Oil%20-%20700%20Ksh%20(Any%20Glow%20Body%20Oil%20+%20Any%20Face%20Cream)%20+%201%20Free%20Perfume%20Pen">
-      Buy
-    </a>        
-  </div>
-</div>
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Brightening%20Combo%20-%202000%20Ksh%20(Brightening%20Face%20700%20+%20Lotion%201300)%20+%20Free%20Pen%20Perfume"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
 
-<!-- OFFER 7 -->
-<div class="offer-card">
-  <h3>Dark Under Eye Cream</h3>
-  <p class="price">599 Ksh <br>1 Free Pen Perfume</p>
-  
-  <div class="actions">
-    <a class="btn-buy" 
-       href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Dark%20Under%20Eye%20Cream%20-%20599%20Ksh%20+%20Free%20Pen%20Perfume">
-      Buy
-    </a>        
-  </div>
-</div>
+    <!-- OFFER 4 -->
+    <div class="offer-card" data-name="Lightening Combo" data-price="3500">
+      <h3>Lightening Combo</h3>
+      <p class="price">3500 Ksh <br>Face (1000) Lotion (2500) + 2 Free Pen Perfumes</p>
+
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Lightening%20Combo%20-%203500%20Ksh%20(Face%201000%20Lotion%202500)%20+%202%20Free%20Pen%20Perfumes"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
+
+    <!-- OFFER 5 -->
+    <div class="offer-card" data-name="Exfoliating Glow Scrub" data-price="600">
+      <h3>Exfoliating Glow Scrub</h3>
+      <p class="price">600 Ksh</p>
+      <p class="details">250ml Lactic Acid + Gloves</p>
+
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Exfoliating%20Glow%20Scrub%20-%20600%20Ksh%20(250ml%20Lactic%20Acid%20+%20Gloves)"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
+
+    <!-- OFFER 6 -->
+    <div class="offer-card" data-name="Glow Body Oil" data-price="700">
+      <h3>Glow Body Oil</h3>
+      <p class="price">700 Ksh <br>Any glow body oil + Any face cream + 1 Free Perfume Pen</p>
+
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Glow%20Body%20Oil%20-%20700%20Ksh%20(Any%20Glow%20Body%20Oil%20+%20Any%20Face%20Cream)%20+%201%20Free%20Perfume%20Pen"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
+
+    <!-- OFFER 7 -->
+    <div class="offer-card" data-name="Dark Under Eye Cream" data-price="599">
+      <h3>Dark Under Eye Cream</h3>
+      <p class="price">599 Ksh <br>1 Free Pen Perfume</p>
+
+      <div class="actions">
+        <button class="btn-add-to-cart" type="button">Add to Cart</button>
+        <a class="btn-buy"
+           href="https://wa.me/254795284897?text=Hello%20Tranquility,%20I%20would%20like%20to%20Buy%20Dark%20Under%20Eye%20Cream%20-%20599%20Ksh%20+%20Free%20Pen%20Perfume"
+           target="_blank"
+           rel="noopener">
+          Buy
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
 <!-- ===========================
      END OFFERS SECTION
      =========================== -->
-
 
 
 
